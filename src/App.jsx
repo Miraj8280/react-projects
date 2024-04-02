@@ -1,5 +1,5 @@
 import "./App.css";
-import { Parent } from "./hooks/useRef";
+// import { Parent } from "./hooks/useRef";
 // import { VideoPlayer } from "./hooks/useRef";
 // import { ContactForm } from "./components/EventHandler";
 // import { FocusInputMount } from "./hooks/useRef";
@@ -7,14 +7,14 @@ import { Parent } from "./hooks/useRef";
 // import User from './components/User';
 // import Counter from './components/Counter';
 // import List from "./components/List";
-// import Greeting from "./components/Greeting";
+import { DisplayGreet } from "./components/Greeting";
 // import Form from "./components/Form";
 // import ParentComponent from "./components/ParentComponent";
 
 function App() {
   return (
     <div>
-      <Parent />
+      <DisplayGreet />
     </div>
   );
 }
