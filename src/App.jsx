@@ -1,10 +1,11 @@
 import "./App.css";
-import ClickCounter from "./hoc/ClickCounter";
-import HoverCounter from "./hoc/HoverCounter";
-// import { Parent } from "./hooks/useRef";
-// import { VideoPlayer } from "./hooks/useRef";
+import Form from "./hooks/useState/Form";
+// import ClickCounter from "./hoc/ClickCounter";
+// import HoverCounter from "./hoc/HoverCounter";
+// import { VideoPlayer } from "./hooks/useRef/VideoPlayer";
+// import { FocusInputMount } from "./hooks/useRef/FocusInputMount";
+// import { FocusInputBtn } from "./hooks/useRef/FocusInputBtn";
 // import { ContactForm } from "./components/EventHandler";
-// import { FocusInputMount } from "./hooks/useRef";
 // import MultiState from './components/MultiState';
 // import User from './components/User';
 // import Counter from './components/Counter';
@@ -16,8 +17,7 @@ import HoverCounter from "./hoc/HoverCounter";
 function App() {
   return (
     <div>
-      <ClickCounter />
-      <HoverCounter />
+      <Form />
     </div>
   );
 }
