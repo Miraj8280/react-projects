@@ -1,5 +1,8 @@
 import "./App.css";
-import { ContactForm } from "./components/EventHandler";
+import { Parent } from "./hooks/useRef";
+// import { VideoPlayer } from "./hooks/useRef";
+// import { ContactForm } from "./components/EventHandler";
+// import { FocusInputMount } from "./hooks/useRef";
 // import MultiState from './components/MultiState';
 // import User from './components/User';
 // import Counter from './components/Counter';
@@ -11,7 +14,7 @@ import { ContactForm } from "./components/EventHandler";
 function App() {
   return (
     <div>
-      <ContactForm />
+      <Parent />
     </div>
   );
 }
