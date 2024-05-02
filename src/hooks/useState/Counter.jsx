@@ -1,4 +1,6 @@
-// Counter without state variable
+// -----------------------------------------------------------------------------
+//       Counter without state variable
+// -----------------------------------------------------------------------------
 /*
 // Normal variable
 let state = {
@@ -22,10 +24,12 @@ const Counter = () => {
 export default Counter;
 */
 
-import { useState } from "react";
-
-// Counter with state variable
+/*
+// -----------------------------------------------------------------------------
+//       Counter with state variable
+// -----------------------------------------------------------------------------
 // useState hook
+import { useState } from "react";
 
 const Counter = () => {
   const [count, setCount] = useState(0);
@@ -40,5 +44,49 @@ const Counter = () => {
     </div>
   );
 };
+*/
+
+// -----------------------------------------------------------------------------
+//       Counter using custom button and props
+// -----------------------------------------------------------------------------
+import { useState } from "react";
+
+const Counter = () => {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <CustomButton count={count} setCount={setCount} />
+    </div>
+  );
+};
+
+// Custom button without destructuring props
+/*
+function CustomButton(props) {
+  function handleOnClick() {
+    props.setCount(props.count + 1);
+  }
+
+  return (
+    <div>
+      <button onClick={handleOnClick}>Counter {props.count}</button>
+    </div>
+  );
+}
+*/
+
+// Custom button with destructuring props
+function CustomButton({ count, setCount }) {
+    function handleOnClick() {
+        setCount(count + 1);
+    }
+    
+    return (
+        <div>
+            <button onClick={handleOnClick}>Counter {count}</button>
+        </div>
+    );
+}
 
 export default Counter;
