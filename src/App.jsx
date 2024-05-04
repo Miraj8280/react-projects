@@ -1,10 +1,9 @@
-import "./App.css";
-import Counter from "./hooks/useState/Counter";
+import Profile from "./components/Profile";
 
 function App() {
   return (
     <div>
-      <Counter />
+      <Profile />
     </div>
   );
 }
