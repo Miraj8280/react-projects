@@ -1,9 +1,10 @@
-import Gallery from "./components/Gallery";
+import Accordion from "./components/01_accordion/Accordion";
 
 function App() {
   return (
     <div>
-      <Gallery />
+      {/* Accordion components */}
+      <Accordion />
     </div>
   );
 }
