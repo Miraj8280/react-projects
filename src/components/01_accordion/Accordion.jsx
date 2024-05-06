@@ -1,4 +1,4 @@
-import "./style.css";
+import "./accordion.css";
 import { useState } from "react";
 import data from "./data";
 
