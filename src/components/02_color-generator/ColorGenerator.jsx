@@ -1,10 +1,11 @@
 import { useEffect } from "react";
 import { useState } from "react";
-import "./colorGenerator.css"
+import "./colorGenerator.css";
 
 export default function ColorGenerator() {
   const [colorType, setColorType] = useState("hex");
   const [color, setColor] = useState("#000000");
+  const [isCopied, setIsCopied] = useState(false);
 
   function randomColorUtility(length) {
     return Math.floor(Math.random() * length);
@@ -24,12 +25,21 @@ export default function ColorGenerator() {
       const b = randomColorUtility(256);
       setColor(`rgb(${r},${g},${b})`);
     }
+    setIsCopied(false);
   }
 
   useEffect(() => {
     handleGenerateRandomColor(colorType);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [colorType]);
+
+  function copyColorToClipboard() {
+    navigator.clipboard.writeText(color);
+    setIsCopied(true);
+    setTimeout(() => {
+      setIsCopied(false);
+    }, 1000);
+  }
 
   return (
     <div className="color-container">
@@ -38,6 +48,10 @@ export default function ColorGenerator() {
         <div className="color-info">
           <h3>{colorType === "rgb" ? "RGB Color" : "HEX Color"}</h3>
           <h4>{color}</h4>
+          {isCopied && <p>Copied!</p>}
+          <button className="button" onClick={copyColorToClipboard}>
+            Copy color
+          </button>
         </div>
       </div>
       <select
