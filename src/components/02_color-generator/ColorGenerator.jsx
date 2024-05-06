@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useState } from "react";
+import "./colorGenerator.css"
 
 export default function ColorGenerator() {
   const [colorType, setColorType] = useState("hex");
@@ -31,12 +32,12 @@ export default function ColorGenerator() {
   }, [colorType]);
 
   return (
-    <div className="container" style={{height: "100vh"}}>
+    <div className="color-container">
       <h2>Random Color Generator</h2>
-      <div className="color-box">
+      <div className="color-box" style={{ backgroundColor: color }}>
         <div className="color-info">
-          <h2>{colorType === "rgb" ? "RGB Color" : "HEX Color"}</h2>
-          <h3>{color}</h3>
+          <h3>{colorType === "rgb" ? "RGB Color" : "HEX Color"}</h3>
+          <h4>{color}</h4>
         </div>
       </div>
       <select
