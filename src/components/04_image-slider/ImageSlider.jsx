@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from "react-icons/bs";
-
+import "./imageSlider.css";
 
 export default function ImageSlider({ url, page = 1, limit = 5 }) {
   const [images, setImages] = useState([]);
@@ -37,7 +37,7 @@ export default function ImageSlider({ url, page = 1, limit = 5 }) {
     setCurrentSlide(currentSlide === images.length - 1 ? 0 : currentSlide + 1);
   }
 
-//   console.log(images);
+  //   console.log(images);
 
   if (loading) {
     return <div>Loading data! Please wait...</div>;
@@ -48,33 +48,48 @@ export default function ImageSlider({ url, page = 1, limit = 5 }) {
   }
 
   return (
-    <div className="image-container">
-        <BsArrowLeftCircleFill className="arrow arrow-left" onClick={handlePrevious}/>
-      {images && images.length
-        ? images.map((imgItem, index) => (
-            <img
-              key={imgItem.id}
-              src={imgItem.download_url}
-              alt={imgItem.author}
-              className={
-                currentSlide === index ? "current-image" : "current image hide-current-image"
-              }
-            />
-          ))
-        : null}
-        <BsArrowRightCircleFill className="arrow arrow-right" onClick={handleNext}/>
+    <div className="image-slider">
+        <h2>Image Slider</h2>
+      <div className="image-container">
+        <BsArrowLeftCircleFill
+          className="arrow arrow-left"
+          onClick={handlePrevious}
+        />
+        {images && images.length
+          ? images.map((imgItem, index) => (
+              <img
+                key={imgItem.id}
+                src={imgItem.download_url}
+                alt={imgItem.author}
+                className={
+                  currentSlide === index
+                    ? "current-image"
+                    : "current image hide-current-image"
+                }
+              />
+            ))
+          : null}
+        <BsArrowRightCircleFill
+          className="arrow arrow-right"
+          onClick={handleNext}
+        />
 
         <span className="circles">
-            {images && images.length ? images.map((_, index) => (
+          {images && images.length
+            ? images.map((_, index) => (
                 <button
-                    key={index}
-                    className={
-                        currentSlide === index ? "current-cirle" : "current-circle inactive-circle"
-                    }
-                    onClick={() => setCurrentSlide(index)}
+                  key={index}
+                  className={
+                    currentSlide === index
+                      ? "current-circle"
+                      : "current-circle inactive-circle"
+                  }
+                  onClick={() => setCurrentSlide(index)}
                 ></button>
-            )) : null}
+              ))
+            : null}
         </span>
+      </div>
     </div>
   );
 }

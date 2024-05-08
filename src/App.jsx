@@ -7,16 +7,16 @@ function App() {
   return (
     <div>
       {/* Accordion - Single & Multi-Select*/}
-      {/* <Accordion /> */}
+      <Accordion />
 
       {/* Random Color Generator */}
-      {/* <ColorGenerator /> */}
+      <ColorGenerator />
 
       {/* Star Rating  */}
-      {/* <StarRating /> */}
+      <StarRating />
 
       {/* Image Slider */}
-      <ImageSlider url={"https://picsum.photos/v2/list"} page={1} limit={5} />
+      <ImageSlider url={"https://picsum.photos/v2/list"} page={1} limit={10} />
     </div>
   );
 }
