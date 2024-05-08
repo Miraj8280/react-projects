@@ -1,0 +1,22 @@
+.footer-container {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    color: #500050;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.heart {
+    color: #ff0000;
+}
+
+.myName {
+    text-decoration: none;
+}
+
+.myName:hover {
+    color: green;
+    cursor: pointer;
+    border-bottom: 2px solid green;
+}
+
