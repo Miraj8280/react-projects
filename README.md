@@ -47,4 +47,23 @@ The Star Rating project allows users to rate items using a star-based system, pr
 
 ![Star Rating Screenshot](./src/assets/star-rating-screenshot.png)
 
+## Project 04: Image Slider
+
+### Overview
+The image slider allows users to slide images by using the previous and next button, providing circle indicators to navigate to a particular image.
+
+### Links
+[Project Repository](https://github.com/Miraj8280/the-art-of-reactjs-mastery/tree/main/src/components/04_image-slider) || [Live Preview](https://the-art-of-reactjs-mastery.vercel.app/)
+
+![Image Slider Screenshot](./src/assets/image-slider-screenshot.png)
+
+## Project 05: Footer Component
+### Overview
+The footer component can be used as a templete within any other project.
+
+### Links
+[Project Repository](https://github.com/Miraj8280/the-art-of-reactjs-mastery/tree/main/src/components/05_footer) || [Live Preview](https://the-art-of-reactjs-mastery.vercel.app/)
+
+![Image Slider Screenshot](./src/assets/footer-screenshot.png)
+
 Happy coding! 🎨✨
